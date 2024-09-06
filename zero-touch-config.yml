@@ -5,12 +5,7 @@ antora:
   dir: www
   modules:
     - name: index
-      label: "Module 1"
-    - name: module_02
-      label: "Module 2"
-    - name: module_03
-      label: "Podman ps"
-
+      label: Module 1
 tabs:
   - name: ">_ Root"
     port: 443
