@@ -36,8 +36,9 @@ The installation will not be successful because your package manager
 (dnf) does not have access to a repository containing Conda. As such,
 you will see an output that resembles this:
 
-.Output
 
+.Output
+[source,text]
 ----
 << output abridged >>
 Error: Unable to find a match: conda
