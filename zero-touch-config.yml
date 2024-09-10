@@ -5,17 +5,15 @@ antora:
   dir: www
   modules:
     - name: index
-      label: Module 1
+      label: Extra Packages for Enterprise Linux
+      
 tabs:
-  - name: ">_ Root"
+  - name: ">_ Terminal"
     port: 443
     path: /wetty
     user: root
     host: rhel
     type: tty
-  - name: ">_ rhel"
+  - name: "RHEL Web Console"
     port: 443
-    path: /wetty
-  - name: "Cockpit"
-    port: 9943
     path: "/cockpit"
