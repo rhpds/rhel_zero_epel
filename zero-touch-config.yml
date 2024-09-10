@@ -13,5 +13,3 @@ tabs:
     path: /tty1
     user: root
     host: rhel
-  - name: "RHEL Web Console"
-    port: 443
