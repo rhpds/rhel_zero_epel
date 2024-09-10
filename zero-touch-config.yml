@@ -10,10 +10,9 @@ antora:
 tabs:
   - name: ">_ Terminal"
     port: 443
-    path: /wetty
+    path: /tty1
     user: root
     host: rhel
-    type: tty
   - name: "RHEL Web Console"
     port: 443
     path: "/cockpit"
