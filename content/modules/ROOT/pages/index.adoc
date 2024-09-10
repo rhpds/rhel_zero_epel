@@ -1,15 +1,14 @@
-In this lab, you will learn about
-https://docs.fedoraproject.org/en-US/epel/[Extra Packages for Enterprise
-Linux (EPEL)], a repository of packages designed to increase the
-flexibility of working with Red Hat Enterprise Linux. EPEL has been
-curated such that none of the packages in EPEL should conflict with
-anything that ships with RHEL, meaning that EPEL enables greater
-flexibility for users while maximizing compatibility with RHEL.
+= Extra Packages for Enterprise Linux
+
+In this lab, you will learn about https://docs.fedoraproject.org/en-US/epel/[Extra Packages for Enterprise Linux (EPEL)], a repository of packages designed to increase the flexibility of working with red Hat Enterprise Linux. EPEL has been curated such that none of the packages in EPEL should conflict with anything that ships with RHEL, meaning that EPEL enables greater flexibility for users while maximizing compatibility with RHEL.
 
 ____
 *Note:* If you choose to use the RHEL web console at any point during
-this lab, you can log in using the following credentials: - Username:
-rhel - Password: redhat
+this lab, you can log in using the following credentials:
+
+- Username: rhel
+
+- Password: redhat
 ____
 
 Suppose that you wish to use Conda for programming. In this lab, we will
@@ -19,7 +18,8 @@ steps by changing the name of the package in your `dnf install` command.
 First, let’s try to install Conda without enabling EPEL. To do this, run
 the following command:
 
-[source,bash]
+.Command
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 dnf install -y conda
 ----
@@ -30,9 +30,11 @@ you will see an output that resembles this:
 
 We can fix this problem by enabling EPEL with the following command:
 
-[source,bash]
+.Command
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms
+
 dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
 
@@ -41,7 +43,8 @@ The output will look like this:
 You have now successfully enabled Extra Packages for Enterprise Linux.
 You can verify your installation by running the following command:
 
-[source,bash]
+.Command
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 dnf repolist
 ----
@@ -52,7 +55,8 @@ software repositories. One of the lines should contain `epel` or
 
 Now that you have confirmed the EPEL installation, try installing Conda:
 
-[source,bash]
+.Command
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 dnf install -y conda
 ----
@@ -63,7 +67,8 @@ that you have successfully installed Conda.
 To verify that Conda is installed and working properly, run this command
 to view the version of Conda that is installed on your system
 
-[source,bash]
+.Command
+[source,bash,subs="+macros,+attributes",role=execute]
 ----
 conda -V
 ----
