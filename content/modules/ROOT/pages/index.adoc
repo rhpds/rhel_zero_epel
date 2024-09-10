@@ -6,9 +6,17 @@ ____
 *Note:* If you choose to use the RHEL web console at any point during
 this lab, you can log in using the following credentials:
 
-- Username: rhel
+[cols="1,1,1"]
+|===
+|*Username*
+|*Password*
+|*Red Hat Enterprise Linux Web Console*
 
-- Password: redhat
+|{cockpit_user_name}
+|{cockpit_user_password}
+|{cockpit_url}[RHEL Web Console^]
+
+|===
 ____
 
 Suppose that you wish to use Conda for programming. In this lab, we will
@@ -28,6 +36,13 @@ The installation will not be successful because your package manager
 (dnf) does not have access to a repository containing Conda. As such,
 you will see an output that resembles this:
 
+.Output
+
+----
+<< output abridged >>
+Error: Unable to find a match: conda
+----
+
 We can fix this problem by enabling EPEL with the following command:
 
 .Command
@@ -36,6 +51,15 @@ We can fix this problem by enabling EPEL with the following command:
 subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms
 
 dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+----
+
+----
+
+<< output abridged >>
+Installed:
+  epel-release-9-5.el9.noarch
+
+Complete!
 ----
 
 The output will look like this:
