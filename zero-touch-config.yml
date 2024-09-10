@@ -15,4 +15,4 @@ tabs:
     host: rhel
   - name: "RHEL Web Console"
     port: 443
-    path: "/web1"
+    path: /web1
